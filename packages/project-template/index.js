@@ -1,10 +1,12 @@
+const core = require('./lib/core');
 
 const main = () => {
-    console.log('Main function')
-}
+  console.log('Main function');
+  core.greeter();
+};
 
-module.exports = main
+module.exports = main;
 
-if(!module.parent){
-    main()
+if (!module.parent) {
+  main();
 }
