@@ -4,6 +4,7 @@
   "description": "Home of the public libraries of Coorpacademy",
   "main": "index.js",
   "scripts": {
+    "lerna": "lerna",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -21,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/CoorpAcademy/coorpacademy-public-libraries/issues"
   },
-  "homepage": "https://github.com/CoorpAcademy/coorpacademy-public-libraries#readme"
+  "homepage": "https://github.com/CoorpAcademy/coorpacademy-public-libraries#readme",
+  "devDependencies": {
+    "lerna": "^3.4.0"
+  }
 }
