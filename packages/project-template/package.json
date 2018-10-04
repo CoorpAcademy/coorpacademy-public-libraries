@@ -16,8 +16,10 @@
   "license": "ISC",
   "dependencies": {},
   "devDependencies": {
+    "@coorpacademy/eslint-plugin-coorpacademy": "^8.1.1",
     "ava": "^0.22.0",
     "codecov": "^2.3.0",
+    "eslint": "^5.6.1",
     "nyc": "^11.1.0"
   }
 }
