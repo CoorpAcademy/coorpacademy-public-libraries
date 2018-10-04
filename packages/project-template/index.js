@@ -1,8 +1,9 @@
 const core = require('./lib/core');
 
 const main = () => {
+  /* eslint-disable no-console */
   console.log('Main function');
-  core.greeter();
+  console.log(core.greeter());
 };
 
 module.exports = main;
