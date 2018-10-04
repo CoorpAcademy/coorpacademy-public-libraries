@@ -1,5 +1,7 @@
 # coorpacademy-public-libraries
 
+[![Build Status](https://travis-ci.org/CoorpAcademy/coorpacademy-public-libraries.svg?branch=master)](https://travis-ci.org/CoorpAcademy/coorpacademy-public-libraries)
+[![codecov](https://codecov.io/gh/CoorpAcademy/coorpacademy-public-libraries/branch/master/graph/badge.svg)](https://codecov.io/gh/CoorpAcademy/coorpacademy-public-libraries)
 [![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lernajs.io/)
 
 > Home of the public libraries of Coorpacademy
