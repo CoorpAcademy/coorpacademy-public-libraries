@@ -2,10 +2,15 @@ const test = require('ava');
 
 const getConfiguration = require('..');
 
-test('should crash when folder is missing', t => {
+test('should crash when path is not defined', t => {
+	t.throws(() => getConfiguration())
+	t.pass();
   
 });
-test.todo('should crash when path does not point to a folder');
+test('should crash when path does not point to a folder', t => {
+	t.throws(() => getConfiguration('../missing-defaults'))
+	t.pass();
+});
 
 test.todo('should crash with missing defaults');
 
