@@ -8,6 +8,7 @@ env:
     - NODE_ENV=test
   matrix:
     - PACKAGE=project-template
+    - PACKAGE=config
 before_install:
   - cd packages/$PACKAGE
 install: 
