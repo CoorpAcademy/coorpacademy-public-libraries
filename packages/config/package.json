@@ -1,11 +1,10 @@
 {
-  "name": "@coorpacademy/new-project",
-  "version": "0.1.0",
-  "description": "New Project",
+  "name": "@coorpacademy/config",
+  "version": "0.0.1",
+  "description": "Coorpacademy Config library",
   "main": "index.js",
   "scripts": {
-    "test": "npm run lint && npm run test:unit",
-    "test:unit": "ava",
+    "test": "npm run lint && ava **/*.test.js",
     "lint": "eslint lib/ test/ *.js *.json --ext .js,.json",
     "cover": "nyc npm run test",
     "publish-coverage": "nyc report --reporter=lcov > coverage.lcov && codecov"
@@ -15,7 +14,9 @@
   ],
   "author": "Coorpacademy Team",
   "license": "ISC",
-  "dependencies": {},
+  "dependencies": {
+    "lodash": "^4.17.11"
+  },
   "devDependencies": {
     "@coorpacademy/eslint-plugin-coorpacademy": "^8.1.1",
     "ava": "^0.22.0",

@@ -1,19 +1,19 @@
 language: node_js
 node_js:
   - '6'
-  - '7'
   - '8'
+  - '10'
 env:
   global:
     - NODE_ENV=test
   matrix:
     - PACKAGE=project-template
+    - PACKAGE=config
 before_install:
   - cd packages/$PACKAGE
 install: 
   - npm install
 script:
-  - npm run lint
   - npm run cover
 after_script:
   - npm run publish-coverage
