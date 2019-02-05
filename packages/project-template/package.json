@@ -1,6 +1,6 @@
 {
   "name": "@coorpacademy/new-project",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "New Project",
   "main": "index.js",
   "scripts": {
@@ -15,7 +15,6 @@
   ],
   "author": "Coorpacademy Team",
   "license": "ISC",
-  "dependencies": {},
   "devDependencies": {
     "@coorpacademy/eslint-plugin-coorpacademy": "^8.1.1",
     "ava": "^0.22.0",
