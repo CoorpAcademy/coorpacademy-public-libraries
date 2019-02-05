@@ -1,20 +1,13 @@
-'use strict';
+const fs = require('fs');
+const path = require('path');
 
-const merge = require('lodash/fp/merge');
-const getOr = require('lodash/fp/getOr');
-const coreConfig = require('./config');
-
-const configs = {
-  development: require('./development'),
-  production: require('./production'),
-  staging: require('./staging'),
-  test: require('./test')
-};
-
-function getEnvConfig(forceEnv) {
-  const env = forceEnv || getOr('development', 'NODE_ENV', process.env);
-  // eslint-disable-next-line import/no-dynamic-require
-  return merge(coreConfig, configs[env]());
+function getConfiguration(configFolder, envName, envMapping) {
+  // vérification que le folder existe
+  // va fetcher les defaults dans config folder. (err -> crash) (defaults)
+  // va fetcher le fichier envName dans config folder. (err -> crash)
+  // Injecte les envs pour avoir les configs
+  // merge la config
+  return {bioutiful: 'config'};
 }
 
-module.exports = getEnvConfig;
+module.exports = getConfiguration;
