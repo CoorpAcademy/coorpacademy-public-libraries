@@ -14,7 +14,9 @@
   ],
   "author": "Coorpacademy Team",
   "license": "ISC",
-  "dependencies": {},
+  "dependencies": {
+    "lodash": "^4.17.11"
+  },
   "devDependencies": {
     "@coorpacademy/eslint-plugin-coorpacademy": "^8.1.1",
     "ava": "^0.22.0",
