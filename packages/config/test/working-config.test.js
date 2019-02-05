@@ -1,6 +1,8 @@
 const test = require('ava');
+const path = require('path');
 
-const getConfiguration = require('..');
+const Config = require('..');
+const from = _path => Config.from(__dirname, _path);
 
 test.todo('should get overriden value based on envName value');
 
@@ -8,6 +10,4 @@ test.todo('should rely on default without env override');
 
 test.todo('should crash with missing envName');
 
-test('should get configuration for some concrete example', t => {
-  
-});
+test.todo('should get configuration for some concrete example');
