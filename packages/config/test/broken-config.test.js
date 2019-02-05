@@ -3,17 +3,20 @@ const test = require('ava');
 const getConfiguration = require('..');
 
 test('should crash when path is not defined', t => {
-	t.throws(() => getConfiguration())
-	t.pass();
-  
+  t.throws(() => getConfiguration());
 });
 test('should crash when path does not point to a folder', t => {
-	t.throws(() => getConfiguration('../missing-defaults'))
-	t.pass();
+  t.throws(() => getConfiguration('foo'));
 });
 
-test.todo('should crash with missing defaults');
+test('should crash with missing defaults', t => {
+  t.throws(() => getConfiguration('../missing-defaults'));
+});
 
-test.todo('should crash with invalid envName');
+test('should crash with invalid envName', t => {
+  t.throws(() => getConfiguration('../working-config', null));
+});
 
-test.todo('should crash with missing  envName');
+test('should crash with missing envName', t => {
+  t.throws(() => getConfiguration('../working-config', null));
+});
