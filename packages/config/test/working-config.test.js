@@ -1,3 +1,5 @@
+'use strict';
+
 const test = require('ava');
 
 const Config = require('..');
@@ -36,5 +38,5 @@ test('should not be modifiable (freeze)', t => {
   }, "Cannot assign to read only property 'chaine' of object '#<Object>'");
   t.throws(() => {
     conf.newvalue = 'sneaky add';
-  }, 'Cannot add property newvalue, object is not extensible');
+  }, /object is not extensible/);
 });
