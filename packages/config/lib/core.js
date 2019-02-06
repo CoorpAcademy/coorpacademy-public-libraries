@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const merge = require('lodash/fp/merge');
+const freeze = require('deep-freeze');
 
 /**
  * Get configuration from a configFolder, envName and environment
@@ -29,7 +30,7 @@ function getConfiguration(configFolder, envName, environment) {
   const envFactory = require(path.join(configFolder, envName));
   const envConfig = envFactory(environment);
 
-  return merge(defaultConfig, envConfig);
+  return freeze(merge(defaultConfig, envConfig));
 }
 
 /**

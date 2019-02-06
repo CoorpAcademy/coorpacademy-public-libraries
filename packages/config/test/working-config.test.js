@@ -25,3 +25,16 @@ test('should get configuration for some concrete example', t => {
     chaine: 'the production string'
   });
 });
+
+test('should not be modifiable (freeze)', t => {
+  const conf = Config.get(from('configs/working-config'), 'production', {NODE_ENV: 'production'});
+  t.throws(() => {
+    conf.number = 12;
+  }, "Cannot assign to read only property 'number' of object '#<Object>'");
+  t.throws(() => {
+    conf.chaine = 'jaitoucasser';
+  }, "Cannot assign to read only property 'chaine' of object '#<Object>'");
+  t.throws(() => {
+    conf.newvalue = 'sneaky add';
+  }, 'Cannot add property newvalue, object is not extensible');
+});
