@@ -1,7 +1,5 @@
-import * as t from 'io-ts';
 import {UrlCodec, JwtCodec} from './codecs';
+import {Jwt, Url} from './types';
 
-export type Url = t.TypeOf<typeof UrlCodec>;
-export type Jwt = t.TypeOf<typeof JwtCodec>;
-
-module.exports = {UrlCodec, JwtCodec};
+export type {Jwt, Url};
+export {UrlCodec, JwtCodec};
