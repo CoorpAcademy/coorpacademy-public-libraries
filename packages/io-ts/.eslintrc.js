@@ -17,7 +17,7 @@ module.exports = {
   parser: '@typescript-eslint/parser',
   settings: {
     'import/ignore': ['node_modules'],
-    'import/extensions': ['.js', '.ts', '.tsx'],
+    'import/extensions': ['.js', '.ts'],
     node: {
       resolvePaths: ['node_modules/@types'],
       tryExtensions: ['.js', '.json', '.ts', '.d.ts']
